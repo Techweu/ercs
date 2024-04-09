@@ -1,0 +1,78 @@
+<!--Page Header Start-->
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(../../../assets/images/backgrounds/page-header-bg.jpg)">
+    </div>
+    <div class="page-header-shape-1 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-1.png" alt="">
+    </div>
+    <div class="page-header-shape-2 float-bob-y">
+        <img src="../../../assets/images/shapes/page-header-shape-2.png" alt="">
+    </div>
+    <div class="page-header-shape-3 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-3.png" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h2>{{article.title}}</h2>
+        </div>
+    </div>
+</section>
+<section class="breadcrumb-bottom">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="index">Home</a></li>
+                <li><span>/</span></li>
+                <li><a href="/articles">Articles</a></li>
+                <li><span>/</span></li>
+                <li>{{article.title}}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<section class="news-sidebar">
+    <div class="container">
+        <div class="row">
+           <!-- Content start-->
+           <div [innerHTML]="content" class="col-xl-8 col-lg-7"></div>
+
+           <!--end content-->
+            <div class="col-xl-4 col-lg-5">
+                <div class="sidebar">
+                    <div class="sidebar__single sidebar__category">
+                        <h3 class="sidebar__title">All Categories</h3>
+                        <ul class="sidebar__category-list list-unstyled">
+                            <li *ngFor="let item of all_categories" [class.active]="isSelected(item.slug)"><a href="/articles-category/{{item.id}}/{{item.slug}}">{{item.title}}</a></li>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="sidebar__single sidebar__post">
+                        <h3 class="sidebar__title">Latest Posts</h3>
+                        <ul class="sidebar__post-list list-unstyled">
+                            <li *ngFor="let p of post">
+                                <div class="sidebar__post-image">
+                                    <img src="assets/images/blog/lp-1-1.jpg" alt="">
+                                </div>
+                                <div class="sidebar__post-content">
+                                    <h3>
+                                        <span class="sidebar__post-content-meta"><i class="fas fa-clock"></i>8
+                                            May, 2022</span>
+                                        <a href="articles/{{p.title}}">{{p.title}}</a>
+                                    </h3>
+                                </div>
+                            </li>
+                           
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

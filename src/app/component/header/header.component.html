@@ -1,0 +1,117 @@
+<div class="page-wrapper">
+    <header class="main-header-three">
+        <div class="main-header-three__top">
+            <div class="container">
+                <div class="main-header-three__inner">
+                    <div class="main-header-three__top-left">
+                        <ul class="list-unstyled main-header-three__contact-list">
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="text">
+                                    <p><a href="tel:+91-9076611770">+91-9076611770</a><a class="ps-2" href="tel:+91-9076611766">+91-9076611766</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="text">
+                                    <p><a href="mailto:info@elitasrcs.com">info&#64;elitasrcs.com</a></p>
+                                </div>
+                            </li>
+                                <span class="googleleg">     
+                                <div id='google-translate-dropdown'></div>
+                                </span>
+                        </ul>
+                    </div>
+                    <div class="main-header-two__top-right">   
+                    <div class="main-header-two__social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-menu main-menu-three">
+            <div class="container">
+                <div class="main-menu-three__wrapper">
+                    <div class="main-menu-three__left">
+                        <div class="main-menu-three__logo">
+                            <a href=""><img src="../../../assets/images/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="main-menu-three__right">
+                        <div class="main-menu-three__main-menu-box">
+                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list">
+                                <li class="current">
+                                    <a href="">Home</a>
+                                </li> 
+                                <li>
+                                    <a href="/about">About</a>
+                                </li>  
+                                <li class="dropdown megamenu">
+                                    <a href="/services">Services</a>
+                                    <ul>
+                                        <li>
+                                            <section class="home-showcase">
+                                                <div class="container">
+                                                    <div class="home-showcase__inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-4" *ngFor="let service of serviceMenu">
+                                                                <div class="home-showcase__item" >
+                                                                        <h4>{{service.name}}</h4>
+<ul class="sub-menu" >
+<li *ngFor="let item of service.services"><a href="/services/{{item.slug}}">{{item.title}}</a></li>
+
+</ul>
+                                                                </div><!-- /.home-showcase__item -->
+                                                            </div><!-- /.col-lg-3 -->
+                                                            
+                                                        
+                                                        </div><!-- /.row -->
+                                                    </div><!-- /.home-showcase__inner -->
+
+                                                </div><!-- /.container -->
+                                            </section>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">Updates</a>
+                                    <ul class="shadow-box">
+                                            <li><a href="/quality-control-orders">Quality Control Orders</a></li>
+                                            <li><a href="/articles">Articles</a></li>
+                                            <li><a href="/audits">Audits</a></li>
+                                            <li><a href="/blog">Blogs</a></li>
+                                        </ul>
+                                    </li>
+                                <li class="dropdown">
+                                    <a href="#">Gallery</a>
+                                    <ul class="shadow-box">
+                                            <li><a href="/image-gallery">Image Gallery</a></li>
+                                            <li><a href="/video-gallery">Video Gallery</a></li>
+                                        </ul>
+                                    </li>
+                                 <li>
+                                    <a href="/contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                            <div class="main-menu__btn-box">
+                                <a href="/contact" class="thm-btn main-menu__btn">FREE Consultation</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="stricky-header stricked-menu main-menu main-menu-three">
+        <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+    </div><!-- /.stricky-header -->

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ercs2024</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicons Icons -->
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="ERCS" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+ 
+  <script   src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"> 
+   
+</head>
+
+ 
+<body>
+  <app-root></app-root>
+  <!-- All Js -->
+<script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendors/jarallax/jarallax.min.js"></script>
+<script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+<script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+<script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+<script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/vendors/nouislider/nouislider.min.js"></script>
+<script src="assets/vendors/odometer/odometer.min.js"></script>
+<script src="assets/vendors/swiper/swiper.min.js"></script>
+<script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+<script src="assets/vendors/wnumb/wNumb.min.js"></script>
+<script src="assets/vendors/wow/wow.js"></script>
+<script src="assets/vendors/isotope/isotope.js"></script>
+<script src="assets/vendors/countdown/countdown.min.js"></script>
+<script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+<script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="assets/vendors/vegas/vegas.min.js"></script>
+<script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+<script src="assets/vendors/timepicker/timePicker.js"></script>
+<script src="assets/vendors/circleType/jquery.circleType.js"></script>
+<script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+<!-- template js -->
+<script src="assets/js/qrowd.js"></script>
+<script>
+   var myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
+   myModal.show();
+   
+       
+</script>
+<script>
+   $(document).ready(function(){
+     $('.toggle').click(function(){
+       $('.sidebar-contact').toggleClass('active')
+       $('.toggle').toggleClass('active')
+     })
+   })
+</script>
+<script type="text/javascript">
+   function googleTranslateElementInit() {
+     new google.translate.TranslateElement({
+       pageLanguage: 'en'
+     }, 'google-translate-dropdown');
+   }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+      new DataTable('#example');
+  </script>
+  <script>
+  $('.filters ul li').click(function(){
+    $('.filters ul li').removeClass('active');
+    $(this).addClass('active');
+    var data = $(this).attr('data-filter');
+    $grid.isotope({
+      filter: data
+    })
+  });
+  var $grid = $(".grid").isotope({
+    itemSelector: ".all",
+    percentPosition: true,
+    masonry: {
+      columnWidth: ".all"
+    }
+  })
+  </script>
+  <script>
+    $(".toggle").on("click", function () {
+    $(".marquee-main").toggleClass("microsoft");
+});
+  </script>
+</body>
+</html>

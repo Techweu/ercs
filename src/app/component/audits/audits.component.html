@@ -1,0 +1,146 @@
+
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(../../../assets/images/backgrounds/page-header-bg.jpg)">
+            </div>
+            <div class="page-header-shape-1 float-bob-x">
+                <img src="../../../assets/images/shapes/page-header-shape-1.png" alt="">
+            </div>
+            <div class="page-header-shape-2 float-bob-y">
+                <img src="../../../assets/images/shapes/page-header-shape-2.png" alt="">
+            </div>
+            <div class="page-header-shape-3 float-bob-x">
+                <img src="../../../assets/images/shapes/page-header-shape-3.png" alt="">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <h2>Audits</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="breadcrumb-bottom">
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="">Home</a></li>
+                        <li><span>/</span></li>
+                        <li>Audits</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+      <!--Gallery Page Start-->
+      <section class="portfolio section mt-3">
+        <div class="container">
+        <div class="filters mt-0 text-start">
+          <ul>
+            <li class="active" data-filter="*">All</li>
+            <li data-filter=".audits">Bis Audits</li>
+            <li data-filter=".industry">Industry Notifications</li>
+          </ul>
+        </div>
+        <div class="filters-content">
+          <div class="row grid">
+            <div class="col-sm-4 all audits" *ngFor="let audit of auditsList.data| paginate:{itemsPerPage: 9, currentPage: page, totalItems: total}">
+              <div class="item">
+                <div class="gallery-page__single mb-3">
+                    <div class="gallery-page__img">
+                        <img src="../../../assets/images/audit/audit1.jpg" alt="">
+                        <div class="gallery-page__icon">
+                            <a class="img-popup" href="../../../assets/images/audit/audit1.jpg"><span class="icon-plus-symbol"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-inner">
+                  <h5>IS 2185 Part 3</h5>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="col-sm-4 all audits">
+              <div class="item">
+                <div class="gallery-page__single mb-3">
+                <div class="gallery-page__img">
+                    <img src="../../../assets/images/audit/audit2.jpg" alt="">
+                    <div class="gallery-page__icon">
+                        <a class="img-popup" href="../../../assets/images/audit/audit2.jpg"><span class="icon-plus-symbol"></span></a>
+                    </div>
+                </div>
+                </div>
+                <div class="p-inner">
+                  <h5>IS 12818</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all industry">
+              <div class="item">
+                <div class="gallery-page__single mb-3">
+                    <div class="gallery-page__img">
+                        <img src="../../../assets/images/audit/audit3.jpg" alt="">
+                        <div class="gallery-page__icon">
+                            <a class="img-popup" href="../../../assets/images/audit/audit3.jpg"><span class="icon-plus-symbol"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-inner">
+                  <h5>IS 9103</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all industry">
+              <div class="item">
+                <div class="gallery-page__single mb-3">
+                    <div class="gallery-page__img">
+                        <img src="../../../assets/images/audit/audit4.jpg" alt="">
+                        <div class="gallery-page__icon">
+                            <a class="img-popup" href="../../../assets/images/audit/audit4.jpg"><span class="icon-plus-symbol"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-inner">
+                  <h5>IS 15778</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all industry">
+              <div class="item">
+                <div class="gallery-page__single mb-3">
+                    <div class="gallery-page__img">
+                        <img src="../../../assets/images/audit/audit5.jpg" alt="">
+                        <div class="gallery-page__icon">
+                            <a class="img-popup" href="../../../assets/images/audit/audit5.jpg"><span class="icon-plus-symbol"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-inner">
+                  <h5>IS 15778</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 all industry">
+              <div class="item">
+                <div class="gallery-page__single mb-3">
+                    <div class="gallery-page__img">
+                        <img src="../../../assets/images/audit/audit6.jpg" alt="">
+                        <div class="gallery-page__icon">
+                            <a class="img-popup" href="../../../assets/images/audit/audit6.jpg"><span class="icon-plus-symbol"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-inner">
+                  <h5>IS 15778</h5>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        <nav class="mb-5"> 
+            <ul class="pagination float-right"> 
+              <pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls>
+            </ul>
+        </nav>
+        </div>
+        </div>
+        </section>

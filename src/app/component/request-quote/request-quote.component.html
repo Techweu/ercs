@@ -1,0 +1,67 @@
+ <!--Request A Quote Form Start-->
+ <div class="services-one">
+    <div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="section-title text-left">
+                <span class="section-title__tagline">Request A Quote</span>
+                <h2 class="section-title__title">Need A Free Quote? Please Feel Free to Contact Us</h2>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-sm-6">
+                        <h5 class="mb-4"><i class="fa fa-reply text-green me-3"></i>Reply within 24 hours</h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <h5 class="mb-4"><i class="fas fa-phone-alt text-green me-3"></i>24 hrs telephone support</h5>
+                    </div>
+                </div>
+                <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                <div class="d-flex align-items-center mt-2">
+                    <div class="d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px; background: #00a09c;">
+                        <i class="fas fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Call to ask any question</h5>
+                        <h4 class="text-green mb-0">
++91-9076611770, +91-9076611766</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="rounded h-100 d-flex align-items-center request-bg" style="background: #00a09c">
+                    <form [formGroup]="requestQForm" (ngSubmit)="sendData()">
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <input type="text" formControlName="name" class="form-control bg-light border-0" placeholder="Your name" style="height: 50px;">
+                                <span *ngIf="name && name.invalid && name.touched" class="error">Please enter your name.</span>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" formControlName="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 50px;">
+                                <span *ngIf="email && email.invalid && email.touched" class="error">Please enter vaild email.</span>
+                            </div>
+                            <div class="col-12">
+                                <select formControlName="services" class="form-select bg-light border-0 mb-0" style="height: 50px;">
+                                    <option value="">Select A Service</option>
+                                    <option *ngFor="let c of categories" [value]="c.name" >{{ c.name }}</option>
+                                    <option value="4">Others</option>
+                                </select>
+                                <span *ngIf="services && services.invalid && services.touched" class="error">Please selected service.</span>
+                            </div>
+                            <div class="col-12">
+                                <textarea formControlName="message" class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                <span *ngIf="message && message.invalid && message.touched" class="error">Please enter your message.</span>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-dark w-100 py-3" type="submit" *ngIf="requestQForm.valid">Request A Quote</button>
+                                <button class="btn btn-dark w-100 py-3" type="button"  *ngIf="requestQForm.invalid">Request A Quote</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Request A Quote Form End -->

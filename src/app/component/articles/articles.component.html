@@ -1,0 +1,103 @@
+<!--Page Header Start-->
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(../../../assets/images/backgrounds/page-header-bg.jpg)">
+    </div>
+    <div class="page-header-shape-1 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-1.png" alt="">
+    </div>
+    <div class="page-header-shape-2 float-bob-y">
+        <img src="../../../assets/images/shapes/page-header-shape-2.png" alt="">
+    </div>
+    <div class="page-header-shape-3 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-3.png" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h2>Articles</h2>
+        </div>
+    </div>
+</section>
+
+<section class="breadcrumb-bottom">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="">Home</a></li>
+                <li><span>/</span></li>
+                <li>Articles</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<!--Events List Start-->
+<section class="events-list">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="events-list__inner">
+                <div class="section-title text-left">
+                    <h2 class="section-title__title">{{category}}</h2>
+                </div>                        
+                <!--Events List Single Start-->
+                <div class="events-list__single" *ngFor="let article of articlesList.data | paginate: { itemsPerPage: 10, currentPage: page, totalItems: total }">
+                    <div class="events-list__left">
+                        <div class="events-list__img">
+                            <img src="../../../assets/images/events/events-list-img-1-1.jpg" alt="">
+                        </div>
+                        <div class="events-list__content">
+                        
+                            <h3 class="events-list__title"><a href="/articles/{{article.slug}}">{{article.title}}</a></h3>
+                            <ul class="list-unstyled events-list__meta">
+                                <li><i class="fas fa-calendar"></i>21.09.2023</li>
+                                <li><i class="fas fa-file"></i>{{article.category}}</li>
+                            </ul>
+                            <p class="events-list__text">{{article.excerpt}}..</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Events List Single End-->
+                
+                <nav> 
+                    <ul class="pagination float-left">
+                       <pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="sidebar">
+                    <div class="sidebar__single sidebar__category">
+                        <h3 class="sidebar__title">All Categories</h3>
+                        <ul class="sidebar__category-list list-unstyled">
+                            <li *ngFor="let cat of all_category" [class.active]="isSelected(cat.slug)"><a href="/articles-category/{{cat.id}}/{{cat.slug}}">{{cat.title}}</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar__single sidebar__post">
+                        <h3 class="sidebar__title">Latest Posts</h3>
+                        <ul class="sidebar__post-list list-unstyled">
+                            <li *ngFor="let p of post">
+                                <div class="sidebar__post-image">
+                                    <img src="../../../assets/images/blog/lp-1-1.jpg" alt="">
+                                </div>
+                                <div class="sidebar__post-content">
+                                    <h3>
+                                        <span class="sidebar__post-content-meta"><i class="fas fa-clock"></i>8
+                                            May, 2022</span>
+                                        <a href="/articles/{{p.slug}}">{{p.title}}</a>
+                                    </h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+        </div>    
+        
+    </div>
+    </div>
+</section>
+<!--Events List End-->

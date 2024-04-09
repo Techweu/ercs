@@ -1,0 +1,302 @@
+<app-request-quote></app-request-quote>
+<!--Site Footer Start-->
+<footer class="site-footer">
+    <div class="site-footer__top">
+       <div class="container">
+          <div class="row">
+             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <div class="footer-widget__column footer-widget__Explore">
+                   <div class="footer-widget__title-box">
+                      <h3 class="footer-widget__title">Services</h3>
+                   </div>
+                   <ul class="footer-widget__Explore-list list-unstyled">
+                      <li *ngFor="let service of footer.serveice"> <a href="/services/{{service.slug}}">{{service.title}}</a> </li>
+                      
+                   </ul>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <div class="footer-widget__column footer-widget__Explore">
+                   <div class="footer-widget__title-box">
+                      <h3 class="footer-widget__title">Mandatory Product</h3>
+                   </div>
+                   <ul class="footer-widget__Explore-list list-unstyled">
+                      <li *ngFor="let product of footer.product"> <a href="/products-category/{{product.slug}}">{{product.title}} Products</a> </li>
+                      
+                   </ul>
+                   <div class="footer-widget__title-box mt-3">
+                      <h3 class="footer-widget__title">Useful Link</h3>
+                   </div>
+                   <ul class="footer-widget__Explore-list list-unstyled">
+                      <li> <a href="">Home</a> </li>
+                      <li> <a href="about">About</a> </li>
+                      <li> <a href="services">Services</a> </li>
+                      <li> <a href="quality-control-orders">Quality Control Orders</a> </li>
+                      <li><a href="articles">Articles</a></li>
+                      <li><a href="audits">Audits</a></li>
+                      <li><a href="blog">Blogs</a></li>
+                      <li><a href="testimonials">Testimonials</a></li>
+                      <li> <a href="feedback">Feedback</a> </li>
+                      <li> <a href="career">Career</a> </li>
+                      <li> <a href="contact">Contact</a> </li>
+                   </ul>
+                </div>
+             </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                <div class="footer-widget__column footer-widget__Fundraising">
+                   <div class="footer-widget__title-box">
+                      <h3 class="footer-widget__title">LATEST QCOS</h3>
+                   </div>
+                   <div class="marquee-main">
+                   <ul class="footer-widget__Explore-list list-unstyled marquee">
+                      <li *ngFor="let qco of footer.qcos"> <a href="/products/{{qco.slug}}">{{qco.title}}</a> </li>
+                      
+                   </ul>
+                 </div>
+                </div>
+                 <div class="footer-widget__title-box mt-3">
+                     <h3 class="footer-widget__title">LATEST Blogs</h3>
+                 </div>
+                 <div class="marquee-main">
+                   <ul class="blog__post-list list-unstyled marquee">
+                     <li *ngFor="let blog of footer.blog">
+                         <div class="blog__post-image">
+                             <img src="../../../assets/images/blog/lp-1-2.jpg" alt="">
+                         </div>
+                         <div class="blog__post-content">
+                             <h3>
+                                 <span class="blog__post-content-meta"><i class="fas fa-clock"></i>8
+                                     May, 2022</span>
+                                 <a href="/blog/{{blog.slug}}">{{blog.title}}</a>
+                             </h3>
+                         </div>
+                     </li>
+                     
+                   </ul>
+                 </div>              
+             </div>
+             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                <div class="footer-widget__column footer-widget__Contact">
+                   <div class="footer-widget__title-box">
+                      <h3 class="footer-widget__title">Office Address</h3>
+                   </div>
+                   <a href=""><img src="../../../assets/images/logo-white.png" alt=""></a>
+                   <h4>ERCS Private Limited</h4>
+                   <ul class="footer-widget__Contact-list list-unstyled">
+                      <li>
+                      <div class="icon">
+                      <span class="icon-pin"></span>
+                      </div>
+                      <div class="text">
+                      <p>Building No. 37 Office No. 407,<br> 3rd Floor, Vikas Complex, Veer Savarkar Block,<br> Shakarpur, New Delhi - 110092</p>
+                      </div>
+                      </li>
+                      <li>
+                      <div class="icon">
+                      <span class="icon-email"></span>
+                      </div>
+                      <div class="text">
+                      <p><a href="mailto:info@elitasrcs.com">info&#64;elitasrcs.com</a></p>
+                      </div>
+                      </li>
+                      <li>
+                       <div class="icon">
+                         <span class="icon-telephone"
+                         ></span>
+                       </div>
+                       <div class="text">
+                       <p><a href="tel:+91-9076611770">+91-9076611770</a></p></div>
+                   </ul>
+                   <h4>SOCIAL CONNECTION</h4>
+                   <div class="site-footer__social">
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-facebook"></i></a>
+                   <a href="#"><i class="fab fa-linkedin"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   </div>
+                   <h4>Payment Methods</h4>
+                   <ul class="payment">
+                     <li><img src="../../../assets/images/visa.png" alt=""></li>
+                     <li><img src="../../../assets/images/master.png" alt=""></li>
+                     <li><img src="../../../assets/images/net.png" alt=""></li>
+                     <li><img src="../../../assets/images/paypal.png" alt=""></li>
+                   </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="site-footer__bottom">
+          <div class="container">
+             <div class="row">
+                <div class="col-xl-4">
+                   <div class="site-footer__bottom-inner">
+                      <p class="site-footer__bottom-text">© 2024 All Rights Reserved</p>
+                   </div>
+                </div>
+                <div class="col-xl-8">
+                   <div class="site-footer__bottom-inner">
+                   <ul class="footer-bottom-link">
+                      <li> <a href="privacy-policy">Privacy Policy</a> </li>
+                      <li> <a href="terms-and-conditions">Terms &amp; Conditions</a> </li>
+                      <li> <a href="refunds-and-cancellation">Refunds &amp; Cancellation</a> </li>
+                      <li> <a href="disclaimer">Disclaimer</a> </li>
+                   </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+ </footer>
+ <!--Site Footer End-->
+ 
+ <!-- /.page-wrapper -->
+ <div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+       <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+       <div class="logo-box">
+          <a href="" aria-label="logo image"><img src="../../../assets/images/logo.png" width="143"
+             alt="" /></a>
+       </div>
+       <!-- /.logo-box -->
+       <div class="mobile-nav__container"></div>
+       <!-- /.mobile-nav__container -->
+       <ul class="mobile-nav__contact list-unstyled">
+          <li>
+             <i class="fa fa-envelope"></i>
+             <a href="mailto:info@elitasrcs.com">info&#64;elitasrcs.com</a>
+          </li>
+          <li>
+             <i class="fa fa-phone"></i>
+             <a href="tel:666-888-0000">+91-9076611770</a>
+          </li>
+       </ul>
+       <!-- /.mobile-nav__contact -->
+       <div class="mobile-nav__top">
+          <div class="mobile-nav__social">
+             <a href="#" class="fab fa-twitter"></a>
+             <a href="#" class="fab fa-facebook-square"></a>
+             <a href="#" class="fab fa-linkedin"></a>
+             <a href="#" class="fab fa-instagram"></a>
+          </div>
+          <!-- /.mobile-nav__social -->
+       </div>
+       <!-- /.mobile-nav__top -->
+    </div>
+    <!-- /.mobile-nav__content -->
+ </div>
+ <!-- /.mobile-nav__wrapper -->
+ <div class="search-popup">
+    <div class="search-popup__overlay search-toggler"></div>
+    <!-- /.search-popup__overlay -->
+    <div class="search-popup__content">
+       <form action="#">
+          <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+          <input type="text" id="search" placeholder="Search Here..." />
+          <button type="submit" aria-label="search submit" class="thm-btn">
+          <i class="icon-magnifying-glass"></i>
+          </button>
+       </form>
+    </div>
+    <!-- /.search-popup__content -->
+ </div>
+ <!-- /.search-popup -->
+ <!-- Sliding div starts here -->
+ 
+ <div class="sidebar-contact">
+    <div class="toggle">
+       <h4>Enquiry</h4>
+    </div>
+    <div >
+       <form [formGroup]="enquiryForm" (ngSubmit)="sendData()">
+          <input type="text" formControlName="name" name="name" placeholder="Name"><br />
+          <span *ngIf="name && name.invalid && name.touched" class="error">Please enter your name.</span>
+          <input type="email" formControlName="email" name="email" placeholder="Email"><br />
+          <span *ngIf="email && email.invalid && email.touched" class="error">Please enter vaild email.</span>
+          <input type="rel" formControlName="phone" name="phone" placeholder="Phone Number"><br />
+          <span *ngIf="phone && phone.invalid && phone.touched" class="error">Please enter valid phone no.</span>
+          <select  formControlName="services" name="services">
+             <option value="">Select Service</option>
+             <option value="BIS Certification (ISI)">BIS Certification (ISI)</option>
+             <option value="BIS Registration (CRS)">BIS Registration (CRS)</option>
+             <option value="WPC Approval">WPC Approval</option>
+             <option value="EPR Authorization">EPR Authorization</option>
+             <option value="BEE Star Rating">BEE Star Rating</option>
+             <option value="Legal Metrology">Legal Metrology</option>
+             <option value="FSSAI License">FSSAI License</option>
+             <option value="AIS Certification">AIS Certification</option>
+          </select><br />
+          <span *ngIf="services && services.invalid && services.touched" class="error">Please selected service.</span>
+          <textarea formControlName="message" placeholder="Message here.."></textarea><br />
+          <span *ngIf="message && message.invalid && message.touched" class="error">Please enter your message.</span>
+          <button type="submit" class="thm-btn contact-form__btn" >Submit</button>
+       </form>
+    </div>
+ </div>
+ <!-- Sliding div ends here -->
+ 
+ <!-- Modal -->
+ <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+       <div class="modal-header border-0 pb-0">
+         <h4 class="text-center w-100">Request A Quote</h4>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+       <div class="form-popup">
+       <input type="checkbox" id="flip">
+     <div class="cover">
+       <div class="front">
+         <img src="../../../assets/images/backgrounds/services-one-single-bg.jpg" alt="">
+       </div>
+     </div>
+ 
+       <div class="forms">
+         <div class="form-content">
+           <div class="login-form">
+           <form action="#">
+             <div class="input-boxes">
+               <div class="input-box">
+                 <input type="text" placeholder="Enter your name" required>
+               </div>
+               <div class="input-box">
+                 <input type="text" placeholder="Enter your email" required>
+               </div>
+               <div class="input-box">
+                 <input type="mobile" placeholder="Enter your mobile" required>
+               </div>
+               <div class="input-box">
+                 <select id="services" name="services" required="required"> 
+                     <option class="dulltxt" value="">Select Service</option> 
+                     <option value="">Select Service</option>
+                     <option value="bis-bureau-of-indian-standards">BIS (Bureau of Indian Standards) </option>
+                     <option value="waste-management-compliances">Waste Management Compliances </option>
+                     <option value="other-regulatory-compliances">Other Regulatory Compliances </option>
+                     <option value="others">Others</option>
+                 </select>
+               </div>
+               <div class="input-box">
+                 <textarea placeholder="Message here.."></textarea>
+               </div>
+               <div class="button">
+                <button class="btn thm-btn w-100 py-3" type="submit">Request A Quote</button>
+               </div>
+             </div>
+         </form>
+       </div>
+     </div>
+     </div>
+ 
+ 
+   </div>
+        </div>
+      </div>
+    </div>
+    </div> -->
+ 
+ 
+ 
+ <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-right-arrow"></i></a>

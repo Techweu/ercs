@@ -1,0 +1,158 @@
+<!--Page Header Start-->
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(../../../assets/images/backgrounds/page-header-bg.jpg)">
+    </div>
+    <div class="page-header-shape-1 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-1.png" alt="">
+    </div>
+    <div class="page-header-shape-2 float-bob-y">
+        <img src="../../../assets/images/shapes/page-header-shape-2.png" alt="">
+    </div>
+    <div class="page-header-shape-3 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-3.png" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
+</section>
+<section class="breadcrumb-bottom">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="">Home</a></li>
+                <li><span>/</span></li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<!--Address Start-->
+<section class="address mt-5">
+    <div class="container">
+        <div class="row">
+            <!--Address Single Start-->
+            <div class="col-xl-4 col-lg-4">
+                <div class="address__single">
+                    <div class="address__title-box">
+                        <h4 class="address__title">Address</h4>
+                        <div class="address__icon">
+                            <span class="icon-location"></span>
+                        </div>
+                    </div>
+                    <p class="address__text">Building No. 37 Office No. 407 3rd Floor, Vikas Complex, Veer Savarkar Block, Shakarpur, Delhi PIN - 110092</p>
+                </div>
+            </div>
+            <!--Address Single End-->
+            <!--Address Single Start-->
+            <div class="col-xl-4 col-lg-4">
+                <div class="address__single">
+                    <div class="address__title-box">
+                        <h4 class="address__title">Email Id</h4>
+                        <div class="address__icon">
+                            <span class="icon-email"></span>
+                        </div>
+                    </div>
+                    <p class="address__text">
+                        <a class="address__email" href="mailto:info@elitasrcs.com">info&#64;elitasrcs.com</a>
+                    </p>
+                    <div class="address__text mt-3">
+                        <h5>Open Hours</h5>
+                        Mon - Sat= 10:00 AM - 7:00 PM
+                    </div>
+                </div>
+            </div>
+            <!--Address Single End-->
+            <!--Address Single Start-->
+            <div class="col-xl-4 col-lg-4">
+                <div class="address__single">
+                    <div class="address__title-box">
+                        <h4 class="address__title">Contact Number</h4>
+                        <div class="address__icon">
+                            <span class="icon-telephone"></span>
+                        </div>
+                    </div>
+                    <p class="address__text"><a href="tel:+91-9076611770">+91-9076611770</a></p>
+                    <p class="address__text"><a href="tel:+91-9076611766">+91-9076611766</a></p>
+                </div>
+            </div>
+            <!--Address Single End-->
+        </div>
+    </div>
+</section>
+<!--Address End-->
+
+
+<!--Contact One Start-->
+<section class="contact-one">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">Contact with us</span>
+            <h2 class="section-title__title">Feel free to write us anytime</h2>
+        </div>
+        <div class="row">
+        <div class="col-xl-6">
+        <div class="contact-one__form-box">
+            <form [formGroup]="contactForm" (ngSubmit)="sendData()" class="contact-one__form contact-form-validated">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="contact-form__input-box">
+                            <input type="text" formControlName="name" placeholder="Your Name" name="name">
+                            <span *ngIf="name && name.invalid && name.touched" class="error">Please enter your name.</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="contact-form__input-box">
+                            <input type="email" formControlName="email" placeholder="Email Address" name="email">
+                            <span *ngIf="email && email.invalid && email.touched" class="error">Please enter vaild email.</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="contact-form__input-box">
+                            <input type="text" formControlName="phone" placeholder="Phone" name="phone">
+                            <span *ngIf="phone && phone.invalid && phone.touched" class="error">Please enter valid phone no.</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="contact-form__input-box">
+                            <select id="services011" formControlName="services" name="services"> 
+                                <option class="dulltxt" value="">Select Service</option> 
+                                <option value="bis-bureau-of-indian-standards">BIS (Bureau of Indian Standards) </option>
+                                <option value="waste-management-compliances">Waste Management Compliances </option>
+                                <option value="other-regulatory-compliances">Other Regulatory Compliances </option>
+                                <option value="others">Others</option>
+                            </select>
+                            <span *ngIf="services && services.invalid && services.touched" class="error">Please selected service.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="contact-form__input-box text-message-box">
+                            <textarea name="message" formControlName="message" placeholder="Write a Message"></textarea>
+                            <span *ngIf="message && message.invalid && message.touched" class="error">Please enter your message.</span>
+                        </div>
+                        <div class="contact-form__btn-box">
+                            <button type="submit" class="thm-btn contact-form__btn" >Send a Message</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="col-xl-6">
+<!--Google Map Start-->
+<section class="google-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7003.9167242234225!2d77.26933107770996!3d28.63101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdc842b44007%3A0x634ca2193a1bfbdd!2sVikas%20marg!5e0!3m2!1sen!2sin!4v1707045629794!5m2!1sen!2sin" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+<!--Google Map End-->
+</div>
+</div>
+</div>
+</section>
+<!--Contact One End-->

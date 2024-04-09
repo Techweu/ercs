@@ -1,0 +1,96 @@
+  <!--Page Header Start-->
+  <section class="page-header">
+    <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+    </div>
+    <div class="page-header-shape-1 float-bob-x">
+        <img src="assets/images/shapes/page-header-shape-1.png" alt="">
+    </div>
+    <div class="page-header-shape-2 float-bob-y">
+        <img src="assets/images/shapes/page-header-shape-2.png" alt="">
+    </div>
+    <div class="page-header-shape-3 float-bob-x">
+        <img src="assets/images/shapes/page-header-shape-3.png" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h2>{{qco.title}}</h2>
+        </div>
+    </div>
+</section>
+
+<section class="breadcrumb-bottom">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="">Home</a></li>
+                <li><span>/</span></li>
+                <li><a href="/quality-control-orders">Quality Control Orders</a></li>
+                <li><span>/</span></li>
+                <li>{{qco.title}}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<!--Quality One Start-->
+<section class="quality-one">
+<div class="container">
+  <div class="row">
+<!--             <div class="col-xs-12">
+        <div class="section-title text-center">
+            <h2 class="section-title__title">For BIS Clarification Product Manual</h2>
+        </div>
+    </div> -->
+  <div class="col-xs-12">
+    <div class="quality-bg">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="left">
+                <img class="img-fluid" src="../../../assets/images/logo.png" alt="">
+                <p>BIS issues product manuals as guidance documents for conformity assessment as per various Indian Standards. Many of these products are covered under the
+    product certification scheme of BIS. These product manuals also incorporate Scheme of Inspection and Testing (SIT) specifying controls and checks to be
+    exercised by the manufacturer.</p>
+    </div>
+    
+            </div>
+            <div class="col-lg-5">
+                <div class="right">
+                <h4>{{qco.title}}</h4>
+                <h5>{{qco.indian_standerd}}</h5>
+                <p><span>Order Issue Date:</span> {{qco.issued_at}}</p>
+                <p><span>Extension Order Date</span> {{qco.ordered_at}}
+                <p><span>Implementation Date:</span> {{qco.ordered_at}}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+<div class="col-xs-12">
+<div class="quality-cont" [innerHTML]="content">    
+</div>
+</div>
+  <div class="col-xs-12">
+        <div class="section-title text-center">
+            <h2 class="section-title__title">{{qco.ministry.name}}</h2>
+        </div>
+</div>
+
+<div class="col-xl-12">
+    <div class="quality-pdf-bg">
+        <h4>{{qco.title}}</h4>
+        <div class="main_contenbt">
+        <iframe width="100%" height="800" src="https://www.elitasrcs.com/assets/uploads/media-uploader/bis-clarification-product-manual1706582805.pdf" alt=""> 
+        </iframe>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+  </div>
+</div>
+</section>
+<!--Quality One End-->

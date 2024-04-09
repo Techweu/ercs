@@ -1,0 +1,213 @@
+<section class="page-header">
+    <div class="page-header-bg" style="background-image: url(../../../assets/images/backgrounds/page-header-bg.jpg)">
+    </div>
+    <div class="page-header-shape-1 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-1.png" alt="">
+    </div>
+    <div class="page-header-shape-2 float-bob-y">
+        <img src="../../../assets/images/shapes/page-header-shape-2.png" alt="">
+    </div>
+    <div class="page-header-shape-3 float-bob-x">
+        <img src="../../../assets/images/shapes/page-header-shape-3.png" alt="">
+    </div>
+    <div class="container">
+        <div class="page-header__inner">
+            <h2>{{serviceData.title}}</h2>
+        </div>
+    </div>
+</section>
+
+<section class="breadcrumb-bottom">
+    <div class="container">
+        <div class="page-header__inner">
+            <ul class="thm-breadcrumb list-unstyled">
+                <li><a href="">Home</a></li>
+                <li><span>/</span></li>
+                <li><a href="/services">Services</a></li>
+                <li><span>/</span></li>
+                <li>{{serviceData.title}}</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--Page Header End-->
+
+<section class="news-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-5">
+                <div class="sidebar">
+                    <div class="sidebar__single sidebar__category">
+                        <h3 class="sidebar__title">All Services</h3>
+                        <ul class="sidebar__category-list list-unstyled">
+                            <li *ngFor="let item of all_services" [class.active]="isSelected(item.slug)"> <a href="/services/{{item.slug}}">{{item.title}}</a> </li>
+                           
+                        </ul>
+
+                    </div>
+                    <div class="sidebar-form">
+                        <h4>Have any Queries?</h4>
+                        <form [formGroup]="queryForm" (ngSubmit)="sendData()">
+                            <input type="text" formControlName="name" placeholder="Name">
+                            <input type="email" formControlName="email" placeholder="Email">
+                            <input type="rel" formControlName="phone" placeholder="Phone Number">
+                            <select id="services011" formControlName="services">
+                                <option class="dulltxt" value="">Select Service</option>
+                                <option value="">Select Service</option>
+                                <option value="bis-bureau-of-indian-standards">BIS (Bureau of Indian Standards)
+                                </option>
+                                <option value="waste-management-compliances">Waste Management Compliances </option>
+                                <option value="other-regulatory-compliances">Other Regulatory Compliances </option>
+                                <option value="others">Others</option>
+                            </select>
+                            <textarea formControlName="message" placeholder="Message here.."></textarea>
+                            <input type="submit" name="" value="Submit">
+                        </form>
+                    </div>
+
+                    <div class="brochures-widget">
+                        <h3>Brochures</h3>
+                        <p>View our 2017 financial prospectus brochure for an easy to read guide on all of the services
+                            offer.</p>
+                        <div class="btns">
+                            <a href="#"><i class="fa fa-download"></i> Download Brochure</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-7">
+                <div class="blog-sidebar__left">
+                    <div class="news-sidebar__content">
+                        <div class="news-sidebar__single">
+                            <div class="news-sidebar__content-box">
+                                <div [innerHTML]="content">
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="section-title text-left mt-3">
+                                            <h3 class="section-title__title">Quality Control Orders</h3>
+                                        </div>
+                                        <div class="services-left">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>S.No.</th>
+                                                            <th>Product Name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>(1)</td>
+                                                            <td><a href="#">LAPTOP/NOTEBOOK/TABLETS -IS 13252 (PART
+                                                                    1)</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>(2)</td>
+                                                            <td><a href="#">ELECTRONIC GAMES (VIDEO) – IS 616 : 2010</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>(3)</td>
+                                                            <td><a href="#">PLASMA/ LCD/LED TELEVISIONS OF SCREEN SIZE
+                                                                    32″ & ABOVE– IS 616</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>(4)</td>
+                                                            <td><a href="#">OPTICAL DISC PLAYERS WITH BUILT IN
+                                                                    AMPLIFIERS OF INPUT POWER 200W AND ABOVE – IS 616 :
+                                                                    2010</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>(5)</td>
+                                                            <td><a href="#">MICROWAVE OVENS– IS 302-2-25</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <h4>The procedure for BIS Registration in accordance with the Compulsory
+                                                Registration Scheme</h4>
+                                            <p>The Ministry of Electronics and Information Technology (MeitY) and the
+                                                Bureau of Indian Standards (BIS) collaborated in 2012 to launch the
+                                                Compulsory Registration Scheme (CRS), which is an acronym for
+                                                "Compulsory Registration."</p>
+                                            <p>Please note, step-by-step, the following <strong>BIS
+                                                    Registration</strong> process steps:</p>
+                                            <ol>
+                                                <li>Registration on the BIS portal to get login credentials</li>
+                                                <li>Testing of products (sample) in the BIS-recognized lab</li>
+                                                <li>Submission of application</li>
+                                                <li>Scrutiny of Application & Test report by BIS</li>
+                                                <li>Submit Affidavit to BIS</li>
+                                                <li>Grant of License</li>
+                                            </ol>
+
+                                            <h4>Why do we get BIS Registration?</h4>
+                                            <h5>Do you meet the requirements for BIS Registration with your product?
+                                            </h5>
+                                            <p>You will need a BIS license if you are a maker of electronic devices
+                                                covered by the Compulsory Registration Scheme (CRS) Scheme and wish to
+                                                affix the Standard Mark to your products. Based on your self-declaration
+                                                that the product complies with the application you are submitting, BIS
+                                                Registration. Manufacturers are required to register their electronic
+                                                and information technology goods with the Bureau of Indian Standards
+                                                (BIS) under the BIS Registration plan (Compulsory registration scheme)
+                                                before putting them on the Indian market. Under the Compulsory
+                                                Registration Scheme of BIS, the Ministry of Electronics & IT (Meity),
+                                                Government of India, has notified 63, MHIPE and MNRE have notified 8 and
+                                                5 goods, respectively, electronic & IT products.</p>
+                                            <p>This self-declaration of conformity from you indicates that your
+                                                manufacturing infrastructure can produce quality products as per Indian
+                                                Standards with necessary testing facilities which can test the products
+                                                in the prescribed period at your factory premises only.</p>
+
+                                            <h4>Required Documents for BIS Registration</h4>
+                                            <ul>
+                                                <li>Test report Conformity by the independent testing laboratory of
+                                                    product samples (PCB Layout, User Manual, Critical Component List).
+                                                </li>
+                                                <li>A legal address for the manufacturing facility and information about
+                                                    the nature of the business.</li>
+                                                <li>A copy of the trademark registration (brand name)</li>
+                                                <li>In the case of international producers, KYC Documents of Authorized
+                                                    Indian Representative (AIR)</li>
+                                            </ul>
+
+                                            <h4>BIS Registration (CRS) Timeline</h4>
+                                            <ul>
+                                                <li>15 to 20 working days for the following lead model (Inclusion); 20
+                                                    to 25 working days for the first lead model.</li>
+                                                <li>20 to 25 working days for the first lead model.</li>
+                                            </ul>
+                                            <p>The BIS official in charge will inform you if the documentation and
+                                                conformance aren't sufficient or if there's another issue, and if the
+                                                issue isn't resolved within 30 days, they'll send you a rejection
+                                                letter. </p>
+                                            <h4>BIS Registration is legitimate: </h4>
+                                            <p>After the initial two years, a BIS Registration may be renewed. The
+                                                license will become invalid 90 days after its expiration date if the
+                                                license holder does not submit a renewal application and payment
+                                                (including a late fee). The two-year license is valid.</p>
+
+                                            <h4>Testing a return policy example</h4>
+                                            <p>The tested samples must be returned three months following the release of
+                                                the test report. According to its rules, the lab has the ability to
+                                                discard the sample after three months and will no longer consider claims
+                                                after that.</p>
+
+                                            <p>Additionally, the sample could sustain whole or partial damage while
+                                                being analyzed. Any claims regarding this will not be taken into
+                                                consideration by Lab or ERCS Private Limited.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
