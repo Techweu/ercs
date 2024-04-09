@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServiceService {
-  url='https://www.api.elitasrcs.com/api/v1/get-service/';
+  url='https://www.api.elitasrcs.com/api/v1/get-service';
   constructor(private http:HttpClient) { }
   serviceData(){
     return this.http.get(this.url);
