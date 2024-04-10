@@ -22,7 +22,7 @@ export class HomeComponent {
     private meta:Meta,
     private homeData:HomeService){
     homeData.data().subscribe((res)=>{
-     
+     console.log('data',res)
       this.homedata=res;
     });
     

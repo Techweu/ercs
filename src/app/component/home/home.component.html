@@ -187,7 +187,7 @@ Quality Control Order and implementation date
                         <div class="services-one__icon">
                             <span><img src="../../../assets/images/icon/{{service.image}}" alt=""></span>
                         </div>
-                        <h3 class="services-one__title"><a href="bis-registration-crs-consultant-india.php">{{service.title}}</a></h3>
+                        <h3 class="services-one__title"><a href="/services/{{service.slug}}">{{service.title}}</a></h3>
                         <p class="services-one__text">{{service.desc}}</p>
                     </div>
                 </div>
@@ -215,18 +215,20 @@ Quality Control Order and implementation date
 </div>
 <div class="filters-content">
   <div class="row grid">
-    <div class="col-sm-4 all audits" *ngFor="let audit of homedata.audits">
+ 
+    <div *ngFor="let audit of homedata.audits" class="col-sm-4 all {{audit.audit_master.slug}}">
       <div class="item">
+        
         <div class="gallery-page__single mb-3">
             <div class="gallery-page__img">
-                <img src="../../../assets/images/audit/{{audit.image}}" alt="">
+                <img src="{{audit.image}}" alt="">
                 <div class="gallery-page__icon">
-                    <a class="img-popup" href="../../../assets/images/audit/{{audit.image}}"><span class="icon-plus-symbol"></span></a>
+                    <a class="img-popup" href="{{audit.image}}"><span class="icon-plus-symbol"></span></a>
                 </div>
             </div>
         </div>
         <div class="p-inner">
-          <h5>{{audit.text}}</h5>
+          <h5>{{audit.title}}</h5>
         </div>
       </div>
 
