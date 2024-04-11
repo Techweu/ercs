@@ -10,8 +10,10 @@ export class ServiceDetailsService {
   url=this.endpoint+'/get-service/';
   constructor(private http:HttpClient) { }
    details(slug:string){
+    const headers = { 'Content-Type': 'application/json' };
+
     // console.log("slug",slug);
     // console.log('url =>',this.url+slug);
-    return this.http.get(this.url + slug);
+    return this.http.get(this.url + slug,{headers});
   }
 }
