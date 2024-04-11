@@ -9,7 +9,7 @@ export class FooterService {
   endpoint =environment.apiUrl;
   url=this.endpoint+'/footer';
   constructor(private http:HttpClient) { }
-  footerData(){
+   footerData(){
     return this.http.get(this.url);
   }
 }

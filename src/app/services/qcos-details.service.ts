@@ -9,7 +9,7 @@ export class QcosDetailsService {
   endpoint =environment.apiUrl;
   url=this.endpoint+'/quality-control-orders/';
   constructor(private http:HttpClient) { }
-  qcoData(slug:string){
+ qcoData(slug:string){
     return this.http.get(this.url + slug);
   }
 }

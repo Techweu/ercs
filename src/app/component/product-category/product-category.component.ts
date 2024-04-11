@@ -24,6 +24,7 @@ export class ProductCategoryComponent {
     this.service.details(this.slugId)
         .subscribe((response: any) => {
             this.productCategoryData = response;
+            //console.log('product List', this.productCategoryData);
                    
         });
   }

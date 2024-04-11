@@ -9,7 +9,7 @@ export class HomeService {
   endpoint =environment.apiUrl;
   url=this.endpoint+'/home';
   constructor(private http:HttpClient) { }
-  data(){
+   data(){
     return this.http.get(this.url);
   }
 }

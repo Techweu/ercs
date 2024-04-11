@@ -22,8 +22,7 @@ export class ProductDetailsComponent {
 
   ngOnInit(): void  {
     this.slugId = this.route.snapshot.paramMap.get('slug');
-    this.service.details(this.slugId)
-        .subscribe((response: any) => {
+    this.service.details(this.slugId).subscribe((response) => {
          
           this.product = response;
           

@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://www.demo.elitasrcs.com/'
+    apiUrl: 'http://api.elitascrs.net/api/v1'
 };

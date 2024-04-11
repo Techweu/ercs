@@ -9,9 +9,9 @@ export class ServiceDetailsService {
   endpoint =environment.apiUrl;
   url=this.endpoint+'/get-service/';
   constructor(private http:HttpClient) { }
-  details(slug:string){
-    console.log("slug",slug);
-    console.log('url =>',this.url+slug);
+   details(slug:string){
+    // console.log("slug",slug);
+    // console.log('url =>',this.url+slug);
     return this.http.get(this.url + slug);
   }
 }

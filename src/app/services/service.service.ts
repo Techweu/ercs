@@ -9,7 +9,7 @@ export class ServiceService {
   endpoint =environment.apiUrl;
   url=this.endpoint+'/get-service';
   constructor(private http:HttpClient) { }
-  serviceData(){
+   serviceData(){
     return this.http.get(this.url);
   }
 }

@@ -9,6 +9,7 @@ export class ProductDetailsService {
   endpoint =environment.apiUrl;
   url=this.endpoint+'/product-details/';
   constructor(private http:HttpClient) { }
+
   details(slug:string){
     return this.http.get(this.url + slug);
   }

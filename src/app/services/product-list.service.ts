@@ -6,7 +6,8 @@ import {environment} from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProductListService {
-  url=environment+'/product-list/';
+  endpoint =environment.apiUrl;
+  url=this.endpoint+'/product-list/';
   constructor(private http:HttpClient) { }
   details(slug:string){
     return this.http.get(this.url + slug);

@@ -22,6 +22,7 @@ export class FooterComponent {
                 
       service.footerData().subscribe((res)=>{
          this.footer=res;
+         console.log('footer',this.footer);
       });
      
   }
