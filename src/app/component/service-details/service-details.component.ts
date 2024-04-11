@@ -30,7 +30,8 @@ export class ServiceDetailsComponent {
     this.slugId = this.route.snapshot.paramMap.get('slug');
     this.service.details(this.slugId)
         .subscribe((response: any) => {
-          const data =response
+          const data =response;
+          console.log("service details",data);
           this.serviceData = data.service;
           this.all_services = data.all_services;
           this.content = this.sanitizer.bypassSecurityTrustHtml(this.serviceData.description);
