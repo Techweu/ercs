@@ -28,15 +28,18 @@ export class ServiceDetailsComponent {
 
   ngOnInit(): void  {
     this.slugId = this.route.snapshot.paramMap.get('slug');
-    this.service.details(this.slugId)
-        .subscribe((response: any) => {
-          const data =response;
-          console.log("service details",data);
-          this.serviceData = data.service;
-          this.all_services = data.all_services;
-          this.content = this.sanitizer.bypassSecurityTrustHtml(this.serviceData.description);
-          this.excerpt=this.sanitizer.bypassSecurityTrustHtml(this.serviceData.excerpt);
-        });
+    this.getServiceData();
+  }
+ async getServiceData(){
+    await this.service.details(this.slugId)
+    .subscribe((response: any) => {
+      const data =response;
+      console.log("service details",data);
+      this.serviceData = data.service;
+      this.all_services = data.all_services;
+      this.content = this.sanitizer.bypassSecurityTrustHtml(this.serviceData.description);
+      this.excerpt=this.sanitizer.bypassSecurityTrustHtml(this.serviceData.excerpt);
+    });
   }
   queryForm = new FormGroup({
     name:new FormControl('',[Validators.required]),

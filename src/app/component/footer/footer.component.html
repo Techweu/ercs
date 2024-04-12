@@ -10,7 +10,7 @@
                       <h3 class="footer-widget__title">Services</h3>
                    </div>
                    <ul class="footer-widget__Explore-list list-unstyled">
-                      <li *ngFor="let service of footer.service"> <a href="/services/{{service.slug}}">{{service.title}}</a> </li>
+                      <li *ngFor="let service of footer.service.data"> <a href="/services/{{service.slug}}">{{service.title}}</a> </li>
                       
                    </ul>
                 </div>

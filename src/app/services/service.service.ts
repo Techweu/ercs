@@ -12,4 +12,7 @@ export class ServiceService {
    serviceData(){
     return this.http.get(this.url);
   }
+  list(page:number){
+    return this.http.get(this.endpoint+'/get-service-list?page='+page);
+  }
 }

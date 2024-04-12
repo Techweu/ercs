@@ -4,10 +4,13 @@ import{CommonModule} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 import {ProductListService} from '../../services/product-list.service';
 
+import { DataTablesModule } from 'angular-datatables';
+
+
 @Component({
   selector: 'app-product-category',
   standalone: true,
-  imports: [HttpClientModule,CommonModule],
+  imports: [HttpClientModule,CommonModule,DataTablesModule],
   providers:[ProductListService],
   templateUrl: './product-category.component.html',
   styleUrl: './product-category.component.css'
@@ -15,17 +18,23 @@ import {ProductListService} from '../../services/product-list.service';
 export class ProductCategoryComponent {
   slugId: any;
   productCategoryData:any;
-  
- 
-  constructor(private route:ActivatedRoute, private service:ProductListService){}
+  category:any;
 
+  constructor(private route:ActivatedRoute, private service:ProductListService){}
+  
   ngOnInit(): void  {
+    
     this.slugId = this.route.snapshot.paramMap.get('slug');
-    this.service.details(this.slugId)
-        .subscribe((response: any) => {
-            this.productCategoryData = response;
-            //console.log('product List', this.productCategoryData);
-                   
-        });
+    this.getProduct();
+  }
+
+ async getProduct(){
+   await this.service.details(this.slugId)
+    .subscribe((response: any) => {
+        this.productCategoryData = response.all_products;
+        this.category =response.category;
+        console.log('product List', this.productCategoryData);
+               
+    });
   }
 }

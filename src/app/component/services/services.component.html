@@ -30,108 +30,34 @@
 </section>
 <!--Page Header End-->
 
-  <!--Services One Start-->
+<!--Services One Start-->
 <section class="services-one">
     <div class="services-one-shape-1 float-bob-x"
         style="background-image: url(../../../assets/images/shapes/services-one-shape-1.png);"></div>
     <div class="container">
         <div class="row">
             <!--Services One Single Start-->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms" *ngFor="let s of services.data | paginate: { itemsPerPage: 9, currentPage: page, totalItems: total }">
                 <div class="services-one__single">
                     <div class="services-one__single-inner">
                         <div class="services-one__single-bg"
                             style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
                         </div>
                         <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/isi-logo.png" alt=""></span>
+                            <span><img src="../../../assets/images/icon/{{s.img_icon}}" alt=""></span>
                         </div>
-                        <h3 class="services-one__title"><a href="#">ISI / BIS Certification (ISI Mark) – Scheme I</a></h3>
-                        <p class="services-one__text">ISI Certification is the standard compliance mark for industrial products issued by Bureau of Indian Standards (BIS). We provide hassle-free ISI Certification Services to the product manufacturers.</p>
+                        <h3 class="services-one__title"><a href="/services/{{s.slug}}">{{s.title}}</a>
+                        </h3>
+                        <p class="services-one__text">{{s.excerpt}}</p>
                     </div>
                 </div>
             </div>
             <!--Services One Single End-->
-            <!--Services One Single Start-->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <div class="services-one__single">
-                    <div class="services-one__single-inner">
-                        <div class="services-one__single-bg"
-                            style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
-                        </div>
-                        <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/bis-logo.png" alt=""></span>
-                        </div>
-                        <h3 class="services-one__title"><a href="about.php">BIS Registration (CRS) – Scheme II</a></h3>
-                        <p class="services-one__text">BIS Registration is mandatory for Electronic and IT products, LED Lights, Solar Photovoltaics, Switchgears, Chemicals, Cotton, etc. We assist you in getting quick BIS Registration Services for Indian Market.</p>
-                    </div>
-                </div>
-            </div>
-            <!--Services One Single End-->
-            <!--Services One Single Start-->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <div class="services-one__single">
-                    <div class="services-one__single-inner">
-                        <div class="services-one__single-bg"
-                            style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
-                        </div>
-                           <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/isi-certification-logo.png" alt=""></span>
-                        </div>
-                        <h3 class="services-one__title"><a href="about.php">BIS / ISI Certification for Foreign Manufacturers (FMCS)</a></h3>
-                        <p class="services-one__text">Foreign Manufacturers Certification Scheme (FMCS) is a Scheme of BIS / ISI Certification of product for foreign manufacturers. We deliver smooth end-to-end BIS / ISI Certification Services (FMCS) for Foreign Manufacturers.</p>
-                    </div>
-                </div>
-            </div>
-            <!--Services One Single End-->
-            <!--Services One Single Start-->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <div class="services-one__single">
-                    <div class="services-one__single-inner">
-                        <div class="services-one__single-bg"
-                            style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
-                        </div>
-                           <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/wpc-icon.png" alt=""></span>
-                        </div>
-                        <h3 class="services-one__title"><a href="about.php">WPC Approval (ETA)</a></h3>
-                        <p class="services-one__text">WPC Approval is a Safety Certification for Wireless products like headphone, speakers, smartwatch, smart TV, etc. being consumed in India. We bring you fast WPC approval (ETA) Services for better marketplace.</p>
-                    </div>
-                </div>
-            </div>
-            <!--Services One Single End-->
-            <!--Services One Single Start-->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                <div class="services-one__single">
-                    <div class="services-one__single-inner">
-                        <div class="services-one__single-bg"
-                            style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
-                        </div>
-                           <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/bee-registration-icon.png" alt=""></span>
-                        </div>
-                        <h3 class="services-one__title"><a href="about.php">BEE Registration (Star Ratings)</a></h3>
-                        <p class="services-one__text">BEE Registration (Star Ratings) is a power consumption rating of household electrical appliances like air conditioners, refrigerator, geysers, etc. Our BEE Registration Services help your product to get BEE certified.</p>
-                    </div>
-                </div>
-            </div>
-            <!--Services One Single End-->
-            <!--Services One Single Start-->
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                <div class="services-one__single">
-                    <div class="services-one__single-inner">
-                        <div class="services-one__single-bg"
-                            style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
-                        </div>
-                           <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/epr-registration-logo.png" alt=""></span>
-                        </div>
-                        <h3 class="services-one__title"><a href="about.php">EPR Registration for Plastic Waste</a></h3>
-                        <p class="services-one__text">EPR Registration for Plastic Waste is mandatory for recycling plastic waste in India. Our distinctive EPR Registration Services will get you product EPR certified swiftly.</p>
-                    </div>
-                </div>
-            </div>
-            <!--Services One Single End-->
+            <nav> 
+                <ul class="pagination float-right"> 
+                    <pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls>
+                </ul>
+            </nav>
         </div>
     </div>
 </section>

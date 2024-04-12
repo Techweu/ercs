@@ -13,7 +13,7 @@
     </div>
     <div class="container">
         <div class="page-header__inner">
-            <h2>{{productCategoryData.category}} Mandatory Product List</h2>
+            <h2 *ngIf="productCategoryData">{{category}} Mandatory Product List</h2>
         </div>
     </div>
 </section>
@@ -23,7 +23,7 @@
             <ul class="thm-breadcrumb list-unstyled">
                 <li><a href="">Home</a></li>
                 <li><span>/</span></li>
-                <li>{{productCategoryData.category}} Mandatory Product List</li>
+                <li *ngIf="productCategoryData">{{category}} Mandatory Product List</li>
             </ul>
         </div>
     </div>
@@ -36,10 +36,10 @@
   <div class="row">
     <div class="col-xs-12">
         <div class="section-title text-left">
-            <h2 class="section-title__title">{{productCategoryData.category}} Mandatory Product List</h2>
+            <h2 class="section-title__title">{{category}} Mandatory Product List</h2>
         </div>
-        <div class="table-responsive">
-    <table class="table table-striped table-bordered" style="width:100%">
+        <div >
+    <table datatable class="table table-striped table-bordered" style="width:100%">
         <thead>
           <tr>
             <th>Sr. No.</th>
@@ -49,7 +49,7 @@
         </thead>
         <tbody>
 
-          <tr *ngFor="let product of productCategoryData.all_products.data;index as i">
+          <tr *ngFor="let product of productCategoryData;index as i">
             <td>{{i+1}}</td>
             <td><img class="img-fluid" src="../../../assets/images/products/product1.jpg" alt=""></td>
             <td>
