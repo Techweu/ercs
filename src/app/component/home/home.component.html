@@ -185,10 +185,10 @@ Quality Control Order and implementation date
                             style="background-image: url(../../../assets/images/backgrounds/services-one-single-bg.jpg);">
                         </div>
                         <div class="services-one__icon">
-                            <span><img src="../../../assets/images/icon/{{service.image}}" alt=""></span>
+                            <span><img src="../../../assets/images/icon/{{service.img_icon}}" alt=""></span>
                         </div>
-                        <h3 class="services-one__title"><a href="bis-registration-crs-consultant-india.php">{{service.title}}</a></h3>
-                        <p class="services-one__text">{{service.desc}}</p>
+                        <h3 class="services-one__title"><a href="/services/{{service.slug}}">{{service.title}}</a></h3>
+                        <p class="services-one__text">{{service.excerpt}}</p>
                     </div>
                 </div>
             </div>
@@ -215,18 +215,20 @@ Quality Control Order and implementation date
 </div>
 <div class="filters-content">
   <div class="row grid">
-    <div class="col-sm-4 all audits" *ngFor="let audit of homedata.audits">
+ 
+    <div *ngFor="let audit of homedata.audits" class="col-sm-4 all {{audit.audit_master.slug}}">
       <div class="item">
+        
         <div class="gallery-page__single mb-3">
             <div class="gallery-page__img">
-                <img src="../../../assets/images/audit/{{audit.image}}" alt="">
+                <img src="{{audit.image}}" alt="">
                 <div class="gallery-page__icon">
-                    <a class="img-popup" href="../../../assets/images/audit/{{audit.image}}"><span class="icon-plus-symbol"></span></a>
+                    <a class="img-popup" href="{{audit.image}}"><span class="icon-plus-symbol"></span></a>
                 </div>
             </div>
         </div>
         <div class="p-inner">
-          <h5>{{audit.text}}</h5>
+          <h5>{{audit.title}}</h5>
         </div>
       </div>
 
@@ -288,10 +290,10 @@ Quality Control Order and implementation date
                                     </div>
                                     <div class="testimonial-two__client-content">
                                         <h4 class="testimonial-two__client-name">{{testimonial.name}}</h4>
-                                        <p class="testimonial-two__client-sub-title">{{testimonial.subtitle}}</p>
+                                        <p class="testimonial-two__client-sub-title">{{testimonial.designation}}</p>
                                     </div>
                                 </div>
-                                <p class="testimonial-two__text-2">{{testimonial.comment}}</p>
+                                <p class="testimonial-two__text-2">{{testimonial.description}}</p>
                                 <div class="testimonial-two__quote">
                                     <span class="icon-quotes"></span>
                                 </div>

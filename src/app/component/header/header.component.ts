@@ -20,6 +20,7 @@ export class HeaderComponent {
 service.serviceData().subscribe((res)=>{
     
        this.serviceMenu=res;
+       console.log('servicemenu',this.serviceMenu);
      });
   
      
