@@ -20,7 +20,7 @@ export class ProductCategoryComponent {
   productCategoryData:any;
   category:any;
 
-  constructor(private route:ActivatedRoute, private service:ProductListService){}
+  constructor(private route:ActivatedRoute, private service:ProductListService, private datable:DataTablesModule){}
   
   ngOnInit(): void  {
     

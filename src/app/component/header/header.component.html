@@ -1,4 +1,4 @@
-<div class="page-wrapper">
+
     <header class="main-header-three">
         <div class="main-header-three__top">
             <div class="container">
@@ -67,13 +67,10 @@
                                                                 <div class="home-showcase__item" >
                                                                         <h4>{{service.name}}</h4>
 <ul class="sub-menu" >
-<li *ngFor="let item of service.services"><a href="/services/{{item.slug}}">{{item.title}}</a></li>
-
+    <li *ngFor="let item of service.services"><a href="/services/{{item.slug}}">{{item.title}}</a></li>
 </ul>
                                                                 </div><!-- /.home-showcase__item -->
                                                             </div><!-- /.col-lg-3 -->
-                                                            
-                                                        
                                                         </div><!-- /.row -->
                                                     </div><!-- /.home-showcase__inner -->
 
@@ -113,5 +110,5 @@
     </header>
     
     <div class="stricky-header stricked-menu main-menu main-menu-three">
-        <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-    </div><!-- /.stricky-header -->
+        <div class="sticky-header__content"></div>
+    </div>
